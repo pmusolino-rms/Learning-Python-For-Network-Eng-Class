@@ -12,7 +12,11 @@ if len(octets) != 4:
 	sys.exit("Invalid IP address.  Please use correct IPv4 formatting\n")
 
 for i,octet in enumerate(octets):
-	octet = int(octet)
+	try:
+		octet = int(octet)
+	except ValueError:
+		sys.exit("Invalid IP Address: %s" %ip_addr)
+		
 	if (0 <= octet <= 255):
 		if i == 0:
 			if (octet == 0):
