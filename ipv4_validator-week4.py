@@ -5,7 +5,6 @@ import sys
 S="."
 invalid = False
 while True:
-	print str(invalid)
 	ip_addr = raw_input("Enter a valid Ipv4 address: ")
 	octets = ip_addr.split(S)
 
@@ -63,7 +62,7 @@ while True:
 			print("%s: IP address out of range\n" %ip_addr)
 			invalid = True
 			break
-		
+
 	if invalid:
 		next
 	else:

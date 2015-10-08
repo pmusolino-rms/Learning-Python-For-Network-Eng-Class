@@ -290,6 +290,7 @@ for neighbor_detail in r1_cdp_detail:
 		vendor = vendor.split()[1]
 		device_type = device_type.split()[1]
 		network_devices[hostname].update({"vendor":vendor,"device_type":device_type,"model":model})
+
 device_neighbor_list = [sw1_show_cdp_neighbors,r1_show_cdp_neighbors,r2_show_cdp_neighbors,r3_show_cdp_neighbors,r4_show_cdp_neighbors,r5_show_cdp_neighbors]
 
 for neighbor_list in device_neighbor_list:
